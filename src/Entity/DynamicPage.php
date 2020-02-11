@@ -37,11 +37,6 @@ class DynamicPage
     private $content;
 
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\FaqCategories", inversedBy="questionAnswer")
-     */
-    private $category;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -94,17 +89,4 @@ class DynamicPage
 
         return $this;
     }
-
-    public function getCategory(): ?FaqCategories
-    {
-        return $this->category;
-    }
-
-    public function setCategory(?FaqCategories $category): self
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-    
 }
